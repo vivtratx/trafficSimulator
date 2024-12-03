@@ -1,0 +1,4784 @@
+
+This solution was completed by:
+<student name #1>
+<student name #2 (if no partner write "N/A")>
+
+
+Running default test files: 
+
+
+
+------------------ START OF OUTPUT FOR ./InputFiles/data-Trivial1.txt --------------------
+
+
+			READ DATA FROM FILE
+
+The roads:
+Created road from 0 to 1 with length 4 (green=0; red=1; reset=2).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G ...
+
+
+The add car events:
+ADD_CAR_EVENT       for time step   0 on road from   0 to   1.
+Destinations of added cars: 1
+
+
+The road accident/resolved events:
+
+
+			SIMULATE THE ROAD NETWORK
+
+STEP 0
+ADD_CAR_EVENT - Cars enqueued on road from 0 to 1
+Cars on the road from 0 to 1: 
+- - - - (GREEN light)
+
+STEP 1
+Cars on the road from 0 to 1: 
+- - - 1 (RED light)
+
+STEP 2
+Cars on the road from 0 to 1: 
+- - 1 - (GREEN light)
+
+STEP 3
+Cars on the road from 0 to 1: 
+- 1 - - (RED light)
+
+STEP 4
+Cars on the road from 0 to 1: 
+1 - - - (GREEN light)
+Car successfully traveled from 0 to 1 in 5 time steps.
+
+
+Average number of time steps to the reach their destination is 5.00.
+Maximum number of time steps to the reach their destination is 5.
+
+
+			FREE THE SIMULATION DATA
+
+
+------------------ END OF OUTPUT FOR ./InputFiles/data-Trivial1.txt --------------------
+
+
+
+------------------ START OF OUTPUT FOR ./InputFiles/data-Trivial2.txt --------------------
+
+
+			READ DATA FROM FILE
+
+The roads:
+Created road from 0 to 1 with length 4 (green=0; red=1; reset=2).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G ...
+
+
+The add car events:
+ADD_CAR_EVENT       for time step   0 on road from   0 to   1.
+Destinations of added cars: 1
+ADD_CAR_EVENT       for time step  11 on road from   0 to   1.
+Destinations of added cars: 1, 1, 1
+
+
+The road accident/resolved events:
+
+
+			SIMULATE THE ROAD NETWORK
+
+STEP 0
+ADD_CAR_EVENT - Cars enqueued on road from 0 to 1
+Cars on the road from 0 to 1: 
+- - - - (GREEN light)
+
+STEP 1
+Cars on the road from 0 to 1: 
+- - - 1 (RED light)
+
+STEP 2
+Cars on the road from 0 to 1: 
+- - 1 - (GREEN light)
+
+STEP 3
+Cars on the road from 0 to 1: 
+- 1 - - (RED light)
+
+STEP 4
+Cars on the road from 0 to 1: 
+1 - - - (GREEN light)
+Car successfully traveled from 0 to 1 in 5 time steps.
+
+STEP 5
+Cars on the road from 0 to 1: 
+- - - - (RED light)
+
+STEP 6
+Cars on the road from 0 to 1: 
+- - - - (GREEN light)
+
+STEP 7
+Cars on the road from 0 to 1: 
+- - - - (RED light)
+
+STEP 8
+Cars on the road from 0 to 1: 
+- - - - (GREEN light)
+
+STEP 9
+Cars on the road from 0 to 1: 
+- - - - (RED light)
+
+STEP 10
+Cars on the road from 0 to 1: 
+- - - - (GREEN light)
+
+STEP 11
+ADD_CAR_EVENT - Cars enqueued on road from 0 to 1
+Cars on the road from 0 to 1: 
+- - - - (RED light)
+
+STEP 12
+Cars on the road from 0 to 1: 
+- - - 1 (GREEN light)
+
+STEP 13
+Cars on the road from 0 to 1: 
+- - 1 - (RED light)
+
+STEP 14
+Cars on the road from 0 to 1: 
+- 1 - 1 (GREEN light)
+
+STEP 15
+Cars on the road from 0 to 1: 
+1 - 1 - (RED light)
+
+STEP 16
+Cars on the road from 0 to 1: 
+1 1 - 1 (GREEN light)
+Car successfully traveled from 0 to 1 in 6 time steps.
+
+STEP 17
+Cars on the road from 0 to 1: 
+- 1 1 - (RED light)
+
+STEP 18
+Cars on the road from 0 to 1: 
+1 - 1 - (GREEN light)
+Car successfully traveled from 0 to 1 in 8 time steps.
+
+STEP 19
+Cars on the road from 0 to 1: 
+- 1 - - (RED light)
+
+STEP 20
+Cars on the road from 0 to 1: 
+1 - - - (GREEN light)
+Car successfully traveled from 0 to 1 in 10 time steps.
+
+
+Average number of time steps to the reach their destination is 7.25.
+Maximum number of time steps to the reach their destination is 10.
+
+
+			FREE THE SIMULATION DATA
+
+
+------------------ END OF OUTPUT FOR ./InputFiles/data-Trivial2.txt --------------------
+
+
+
+------------------ START OF OUTPUT FOR ./InputFiles/data-Simple.txt --------------------
+
+
+			READ DATA FROM FILE
+
+The roads:
+Created road from 0 to 1 with length 2 (green=0; red=1; reset=2).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G ...
+
+Created road from 1 to 2 with length 2 (green=0; red=1; reset=2).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G ...
+
+Created road from 2 to 3 with length 2 (green=0; red=1; reset=2).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G  R  G ...
+
+
+The add car events:
+ADD_CAR_EVENT       for time step   0 on road from   0 to   1.
+Destinations of added cars: 3, 3, 3
+
+
+The road accident/resolved events:
+
+
+			SIMULATE THE ROAD NETWORK
+
+STEP 0
+ADD_CAR_EVENT - Cars enqueued on road from 0 to 1
+Cars on the road from 0 to 1: 
+- - (GREEN light)
+Cars on the road from 1 to 2: 
+- - (GREEN light)
+Cars on the road from 2 to 3: 
+- - (GREEN light)
+
+STEP 1
+Cars on the road from 0 to 1: 
+- 3 (RED light)
+Cars on the road from 1 to 2: 
+- - (RED light)
+Cars on the road from 2 to 3: 
+- - (RED light)
+
+STEP 2
+Cars on the road from 0 to 1: 
+3 - (GREEN light)
+Cars on the road from 1 to 2: 
+- - (GREEN light)
+Cars on the road from 2 to 3: 
+- - (GREEN light)
+
+STEP 3
+Cars on the road from 0 to 1: 
+- 3 (RED light)
+Cars on the road from 1 to 2: 
+- 3 (RED light)
+Cars on the road from 2 to 3: 
+- - (RED light)
+
+STEP 4
+Cars on the road from 0 to 1: 
+3 - (GREEN light)
+Cars on the road from 1 to 2: 
+3 - (GREEN light)
+Cars on the road from 2 to 3: 
+- - (GREEN light)
+
+STEP 5
+Cars on the road from 0 to 1: 
+- 3 (RED light)
+Cars on the road from 1 to 2: 
+- 3 (RED light)
+Cars on the road from 2 to 3: 
+- 3 (RED light)
+
+STEP 6
+Cars on the road from 0 to 1: 
+3 - (GREEN light)
+Cars on the road from 1 to 2: 
+3 - (GREEN light)
+Cars on the road from 2 to 3: 
+3 - (GREEN light)
+Car successfully traveled from 0 to 3 in 7 time steps.
+
+STEP 7
+Cars on the road from 0 to 1: 
+- - (RED light)
+Cars on the road from 1 to 2: 
+- 3 (RED light)
+Cars on the road from 2 to 3: 
+- 3 (RED light)
+
+STEP 8
+Cars on the road from 0 to 1: 
+- - (GREEN light)
+Cars on the road from 1 to 2: 
+3 - (GREEN light)
+Cars on the road from 2 to 3: 
+3 - (GREEN light)
+Car successfully traveled from 0 to 3 in 9 time steps.
+
+STEP 9
+Cars on the road from 0 to 1: 
+- - (RED light)
+Cars on the road from 1 to 2: 
+- - (RED light)
+Cars on the road from 2 to 3: 
+- 3 (RED light)
+
+STEP 10
+Cars on the road from 0 to 1: 
+- - (GREEN light)
+Cars on the road from 1 to 2: 
+- - (GREEN light)
+Cars on the road from 2 to 3: 
+3 - (GREEN light)
+Car successfully traveled from 0 to 3 in 11 time steps.
+
+
+Average number of time steps to the reach their destination is 9.00.
+Maximum number of time steps to the reach their destination is 11.
+
+
+			FREE THE SIMULATION DATA
+
+
+------------------ END OF OUTPUT FOR ./InputFiles/data-Simple.txt --------------------
+
+
+
+------------------ START OF OUTPUT FOR ./InputFiles/data-Merge1.txt --------------------
+
+
+			READ DATA FROM FILE
+
+The roads:
+Created road from 1 to 0 with length 6 (green=1; red=4; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  G  G  G  R  R  G  G  G  R  R  G  G  G  R  R  G  G  G  R  R  G  G  G  R ...
+
+Created road from 2 to 1 with length 3 (green=0; red=5; reset=10).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  G  G  G  G  G  R  R  R  R  R  G  G  G  G  G  R  R  R  R  R  G  G  G  G  G ...
+
+Created road from 3 to 1 with length 3 (green=5; red=9; reset=10).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  R  R  R  G  G  G  G  R  R  R  R  R  R  G  G  G  G  R  R  R  R  R  R ...
+
+Created road from 4 to 1 with length 3 (green=0; red=9; reset=10).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  G  G  G  G  G  G  G  G  G  R  G  G  G  G  G  G  G  G  G  R  G  G  G  G  G ...
+
+Created road from 0 to 5 with length 3 (green=8; red=9; reset=10).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  R  R  R  R  R  R  G  R  R  R  R  R  R  R  R  R  G  R  R  R  R  R  R ...
+
+Created road from 0 to 6 with length 3 (green=8; red=9; reset=10).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  R  R  R  R  R  R  G  R  R  R  R  R  R  R  R  R  G  R  R  R  R  R  R ...
+
+Created road from 0 to 7 with length 3 (green=8; red=9; reset=10).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  R  R  R  R  R  R  G  R  R  R  R  R  R  R  R  R  G  R  R  R  R  R  R ...
+
+
+The add car events:
+ADD_CAR_EVENT       for time step   0 on road from   2 to   1.
+Destinations of added cars: 5, 5, 5
+ADD_CAR_EVENT       for time step   0 on road from   3 to   1.
+Destinations of added cars: 6, 6, 6
+ADD_CAR_EVENT       for time step   0 on road from   4 to   1.
+Destinations of added cars: 7, 7, 7
+ADD_CAR_EVENT       for time step   5 on road from   1 to   0.
+Destinations of added cars: 0, 0, 0
+
+
+The road accident/resolved events:
+
+
+			SIMULATE THE ROAD NETWORK
+
+STEP 0
+ADD_CAR_EVENT - Cars enqueued on road from 2 to 1
+ADD_CAR_EVENT - Cars enqueued on road from 3 to 1
+ADD_CAR_EVENT - Cars enqueued on road from 4 to 1
+Cars on the road from 1 to 0: 
+- - - - - - (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 1
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - 5 (GREEN light)
+Cars on the road from 3 to 1: 
+- - 6 (RED light)
+Cars on the road from 4 to 1: 
+- - 7 (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 2
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- 5 - (GREEN light)
+Cars on the road from 3 to 1: 
+- 6 - (RED light)
+Cars on the road from 4 to 1: 
+- 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 3
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+5 - 5 (GREEN light)
+Cars on the road from 3 to 1: 
+6 - 6 (RED light)
+Cars on the road from 4 to 1: 
+7 - 7 (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 4
+Cars on the road from 1 to 0: 
+- - - - - 5 (RED light)
+Cars on the road from 2 to 1: 
+- 5 - (GREEN light)
+Cars on the road from 3 to 1: 
+6 6 - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 5
+ADD_CAR_EVENT - Cars enqueued on road from 1 to 0
+Cars on the road from 1 to 0: 
+- - - - 5 7 (RED light)
+Cars on the road from 2 to 1: 
+5 - 5 (RED light)
+Cars on the road from 3 to 1: 
+6 6 6 (GREEN light)
+Cars on the road from 4 to 1: 
+- 7 7 (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 6
+Cars on the road from 1 to 0: 
+- - - 5 - 7 (GREEN light)
+Cars on the road from 2 to 1: 
+5 5 - (RED light)
+Cars on the road from 3 to 1: 
+6 6 6 (GREEN light)
+Cars on the road from 4 to 1: 
+7 - 7 (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 7
+Cars on the road from 1 to 0: 
+- - 5 - 7 6 (GREEN light)
+Cars on the road from 2 to 1: 
+5 5 - (RED light)
+Cars on the road from 3 to 1: 
+- 6 6 (GREEN light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 8
+Cars on the road from 1 to 0: 
+- 5 - 7 - 6 (GREEN light)
+Cars on the road from 2 to 1: 
+5 5 - (RED light)
+Cars on the road from 3 to 1: 
+6 - 6 (GREEN light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (GREEN light)
+Cars on the road from 0 to 6: 
+- - - (GREEN light)
+Cars on the road from 0 to 7: 
+- - - (GREEN light)
+
+STEP 9
+Cars on the road from 1 to 0: 
+5 - 7 - 6 6 (RED light)
+Cars on the road from 2 to 1: 
+5 5 - (RED light)
+Cars on the road from 3 to 1: 
+- 6 - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (RED light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 10
+Cars on the road from 1 to 0: 
+5 7 - 6 - 6 (RED light)
+Cars on the road from 2 to 1: 
+5 5 - (GREEN light)
+Cars on the road from 3 to 1: 
+6 - - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 11
+Cars on the road from 1 to 0: 
+5 7 6 - 6 5 (GREEN light)
+Cars on the road from 2 to 1: 
+- 5 - (GREEN light)
+Cars on the road from 3 to 1: 
+6 - - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 12
+Cars on the road from 1 to 0: 
+- 7 6 6 - 5 (GREEN light)
+Cars on the road from 2 to 1: 
+5 - - (GREEN light)
+Cars on the road from 3 to 1: 
+6 - - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - 5 (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 13
+Cars on the road from 1 to 0: 
+7 - 6 6 5 5 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+6 - - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- 5 - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 14
+Cars on the road from 1 to 0: 
+- 6 - 6 5 5 (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+6 - - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - 7 (RED light)
+
+STEP 15
+Cars on the road from 1 to 0: 
+6 - 6 - 5 5 (RED light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+6 - - (GREEN light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- 7 - (RED light)
+
+STEP 16
+Cars on the road from 1 to 0: 
+6 6 - 5 - 5 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+6 - - (GREEN light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 17
+Cars on the road from 1 to 0: 
+- 6 5 - 5 6 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+- - 6 (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 18
+Cars on the road from 1 to 0: 
+6 - 5 5 - 6 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (GREEN light)
+Cars on the road from 0 to 6: 
+- 6 - (GREEN light)
+Cars on the road from 0 to 7: 
+7 - - (GREEN light)
+Car successfully traveled from 2 to 5 in 19 time steps.
+Car successfully traveled from 4 to 7 in 19 time steps.
+
+STEP 19
+Cars on the road from 1 to 0: 
+- 5 - 5 6 7 (RED light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- 7 - (RED light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+6 - 6 (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 20
+Cars on the road from 1 to 0: 
+5 - 5 - 6 7 (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+7 - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 21
+Cars on the road from 1 to 0: 
+5 5 - 6 - 7 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+7 - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 22
+Cars on the road from 1 to 0: 
+- 5 6 - 7 7 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - 5 (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 23
+Cars on the road from 1 to 0: 
+5 - 6 7 - 7 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+- 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 24
+Cars on the road from 1 to 0: 
+- 6 - 7 7 - (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - 5 (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 25
+Cars on the road from 1 to 0: 
+6 - 7 - 7 0 (RED light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 26
+Cars on the road from 1 to 0: 
+6 7 - 7 - 0 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 27
+Cars on the road from 1 to 0: 
+- 7 7 - 0 - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 6 (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 28
+Cars on the road from 1 to 0: 
+7 - 7 0 - 0 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (GREEN light)
+Cars on the road from 0 to 6: 
+6 6 6 (GREEN light)
+Cars on the road from 0 to 7: 
+- - - (GREEN light)
+Car successfully traveled from 2 to 5 in 29 time steps.
+Car successfully traveled from 3 to 6 in 29 time steps.
+
+STEP 29
+Cars on the road from 1 to 0: 
+- 7 - 0 0 - (RED light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (RED light)
+Cars on the road from 0 to 5: 
+- 5 - (RED light)
+Cars on the road from 0 to 6: 
+- 6 6 (RED light)
+Cars on the road from 0 to 7: 
+- - 7 (RED light)
+
+STEP 30
+Cars on the road from 1 to 0: 
+7 - 0 - 0 0 (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 - 6 (RED light)
+Cars on the road from 0 to 7: 
+- 7 - (RED light)
+
+STEP 31
+Cars on the road from 1 to 0: 
+7 0 - 0 - 0 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 32
+Cars on the road from 1 to 0: 
+- 0 0 - 0 - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+7 - 7 (RED light)
+
+STEP 33
+Cars on the road from 1 to 0: 
+0 - 0 0 - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+7 7 - (RED light)
+Car successfully traveled from 1 to 0 in 29 time steps.
+
+STEP 34
+Cars on the road from 1 to 0: 
+- 0 - 0 - - (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+7 7 - (RED light)
+
+STEP 35
+Cars on the road from 1 to 0: 
+0 - 0 - - - (RED light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+7 7 - (RED light)
+
+STEP 36
+Cars on the road from 1 to 0: 
+0 0 - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+7 7 - (RED light)
+Car successfully traveled from 1 to 0 in 32 time steps.
+
+STEP 37
+Cars on the road from 1 to 0: 
+- 0 - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+7 7 - (RED light)
+
+STEP 38
+Cars on the road from 1 to 0: 
+0 - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (GREEN light)
+Cars on the road from 0 to 6: 
+6 6 - (GREEN light)
+Cars on the road from 0 to 7: 
+7 7 - (GREEN light)
+Car successfully traveled from 1 to 0 in 34 time steps.
+Car successfully traveled from 2 to 5 in 39 time steps.
+Car successfully traveled from 3 to 6 in 39 time steps.
+Car successfully traveled from 4 to 7 in 39 time steps.
+
+STEP 39
+Cars on the road from 1 to 0: 
+- - - - - - (RED light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (RED light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- 6 - (RED light)
+Cars on the road from 0 to 7: 
+- 7 - (RED light)
+
+STEP 40
+Cars on the road from 1 to 0: 
+- - - - - - (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 41
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 42
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 43
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 44
+Cars on the road from 1 to 0: 
+- - - - - - (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 45
+Cars on the road from 1 to 0: 
+- - - - - - (RED light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 46
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 47
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 48
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (GREEN light)
+Cars on the road from 0 to 6: 
+6 - - (GREEN light)
+Cars on the road from 0 to 7: 
+7 - - (GREEN light)
+Car successfully traveled from 3 to 6 in 49 time steps.
+Car successfully traveled from 4 to 7 in 49 time steps.
+
+
+Average number of time steps to the reach their destination is 33.83.
+Maximum number of time steps to the reach their destination is 49.
+
+
+			FREE THE SIMULATION DATA
+
+
+------------------ END OF OUTPUT FOR ./InputFiles/data-Merge1.txt --------------------
+
+
+
+------------------ START OF OUTPUT FOR ./InputFiles/data-Merge2.txt --------------------
+
+
+			READ DATA FROM FILE
+
+The roads:
+Created road from 1 to 0 with length 6 (green=1; red=4; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  G  G  G  R  R  G  G  G  R  R  G  G  G  R  R  G  G  G  R  R  G  G  G  R ...
+
+Created road from 2 to 1 with length 3 (green=0; red=5; reset=10).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  G  G  G  G  G  R  R  R  R  R  G  G  G  G  G  R  R  R  R  R  G  G  G  G  G ...
+
+Created road from 3 to 1 with length 3 (green=5; red=9; reset=10).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  R  R  R  G  G  G  G  R  R  R  R  R  R  G  G  G  G  R  R  R  R  R  R ...
+
+Created road from 4 to 1 with length 3 (green=0; red=9; reset=10).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  G  G  G  G  G  G  G  G  G  R  G  G  G  G  G  G  G  G  G  R  G  G  G  G  G ...
+
+Created road from 0 to 5 with length 3 (green=8; red=9; reset=10).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  R  R  R  R  R  R  G  R  R  R  R  R  R  R  R  R  G  R  R  R  R  R  R ...
+
+Created road from 0 to 6 with length 3 (green=8; red=9; reset=10).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  R  R  R  R  R  R  G  R  R  R  R  R  R  R  R  R  G  R  R  R  R  R  R ...
+
+Created road from 0 to 7 with length 3 (green=8; red=9; reset=10).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  R  R  R  R  R  R  G  R  R  R  R  R  R  R  R  R  G  R  R  R  R  R  R ...
+
+
+The add car events:
+ADD_CAR_EVENT       for time step   0 on road from   2 to   1.
+Destinations of added cars: 5, 5, 5
+ADD_CAR_EVENT       for time step   0 on road from   3 to   1.
+Destinations of added cars: 6, 6, 6
+ADD_CAR_EVENT       for time step   0 on road from   4 to   1.
+Destinations of added cars: 7, 7, 7
+ADD_CAR_EVENT       for time step   5 on road from   1 to   0.
+Destinations of added cars: 0, 0, 0
+
+
+The road accident/resolved events:
+ROAD_ACCIDENT_EVENT for time step  23 on road from   1 to   0.
+ROAD_RESOLVED_EVENT for time step  27 on road from   1 to   0.
+ROAD_ACCIDENT_EVENT for time step  25 on road from   1 to   0.
+ROAD_RESOLVED_EVENT for time step  28 on road from   1 to   0.
+ROAD_ACCIDENT_EVENT for time step  13 on road from   0 to   5.
+ROAD_RESOLVED_EVENT for time step  21 on road from   0 to   5.
+
+
+			SIMULATE THE ROAD NETWORK
+
+STEP 0
+ADD_CAR_EVENT - Cars enqueued on road from 2 to 1
+ADD_CAR_EVENT - Cars enqueued on road from 3 to 1
+ADD_CAR_EVENT - Cars enqueued on road from 4 to 1
+Cars on the road from 1 to 0: 
+- - - - - - (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 1
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - 5 (GREEN light)
+Cars on the road from 3 to 1: 
+- - 6 (RED light)
+Cars on the road from 4 to 1: 
+- - 7 (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 2
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- 5 - (GREEN light)
+Cars on the road from 3 to 1: 
+- 6 - (RED light)
+Cars on the road from 4 to 1: 
+- 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 3
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+5 - 5 (GREEN light)
+Cars on the road from 3 to 1: 
+6 - 6 (RED light)
+Cars on the road from 4 to 1: 
+7 - 7 (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 4
+Cars on the road from 1 to 0: 
+- - - - - 5 (RED light)
+Cars on the road from 2 to 1: 
+- 5 - (GREEN light)
+Cars on the road from 3 to 1: 
+6 6 - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 5
+ADD_CAR_EVENT - Cars enqueued on road from 1 to 0
+Cars on the road from 1 to 0: 
+- - - - 5 7 (RED light)
+Cars on the road from 2 to 1: 
+5 - 5 (RED light)
+Cars on the road from 3 to 1: 
+6 6 6 (GREEN light)
+Cars on the road from 4 to 1: 
+- 7 7 (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 6
+Cars on the road from 1 to 0: 
+- - - 5 - 7 (GREEN light)
+Cars on the road from 2 to 1: 
+5 5 - (RED light)
+Cars on the road from 3 to 1: 
+6 6 6 (GREEN light)
+Cars on the road from 4 to 1: 
+7 - 7 (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 7
+Cars on the road from 1 to 0: 
+- - 5 - 7 6 (GREEN light)
+Cars on the road from 2 to 1: 
+5 5 - (RED light)
+Cars on the road from 3 to 1: 
+- 6 6 (GREEN light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 8
+Cars on the road from 1 to 0: 
+- 5 - 7 - 6 (GREEN light)
+Cars on the road from 2 to 1: 
+5 5 - (RED light)
+Cars on the road from 3 to 1: 
+6 - 6 (GREEN light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (GREEN light)
+Cars on the road from 0 to 6: 
+- - - (GREEN light)
+Cars on the road from 0 to 7: 
+- - - (GREEN light)
+
+STEP 9
+Cars on the road from 1 to 0: 
+5 - 7 - 6 6 (RED light)
+Cars on the road from 2 to 1: 
+5 5 - (RED light)
+Cars on the road from 3 to 1: 
+- 6 - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (RED light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 10
+Cars on the road from 1 to 0: 
+5 7 - 6 - 6 (RED light)
+Cars on the road from 2 to 1: 
+5 5 - (GREEN light)
+Cars on the road from 3 to 1: 
+6 - - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 11
+Cars on the road from 1 to 0: 
+5 7 6 - 6 5 (GREEN light)
+Cars on the road from 2 to 1: 
+- 5 - (GREEN light)
+Cars on the road from 3 to 1: 
+6 - - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - - (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 12
+Cars on the road from 1 to 0: 
+- 7 6 6 - 5 (GREEN light)
+Cars on the road from 2 to 1: 
+5 - - (GREEN light)
+Cars on the road from 3 to 1: 
+6 - - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- - 5 (RED light)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 13
+ROAD_ACCIDENT_EVENT - Adding accident to road from 0 to 5
+Cars on the road from 1 to 0: 
+7 - 6 6 5 5 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+6 - - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- 5 - (RED light - The number of unresolved accidents = 1)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 14
+Cars on the road from 1 to 0: 
+- 6 - 6 5 5 (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+6 - - (RED light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- 5 - (RED light - The number of unresolved accidents = 1)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- - 7 (RED light)
+
+STEP 15
+Cars on the road from 1 to 0: 
+6 - 6 - 5 5 (RED light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+6 - - (GREEN light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- 5 - (RED light - The number of unresolved accidents = 1)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+- 7 - (RED light)
+
+STEP 16
+Cars on the road from 1 to 0: 
+6 6 - 5 - 5 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+6 - - (GREEN light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- 5 - (RED light - The number of unresolved accidents = 1)
+Cars on the road from 0 to 6: 
+- - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 17
+Cars on the road from 1 to 0: 
+- 6 5 - 5 6 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- 5 - (RED light - The number of unresolved accidents = 1)
+Cars on the road from 0 to 6: 
+- - 6 (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 18
+Cars on the road from 1 to 0: 
+6 - 5 5 - 6 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+7 7 - (GREEN light)
+Cars on the road from 0 to 5: 
+- 5 - (GREEN light - The number of unresolved accidents = 1)
+Cars on the road from 0 to 6: 
+- 6 - (GREEN light)
+Cars on the road from 0 to 7: 
+7 - - (GREEN light)
+Car successfully traveled from 4 to 7 in 19 time steps.
+
+STEP 19
+Cars on the road from 1 to 0: 
+- 5 - 5 6 7 (RED light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- 7 - (RED light)
+Cars on the road from 0 to 5: 
+- 5 - (RED light - The number of unresolved accidents = 1)
+Cars on the road from 0 to 6: 
+6 - 6 (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 20
+Cars on the road from 1 to 0: 
+5 - 5 - 6 7 (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+7 - - (GREEN light)
+Cars on the road from 0 to 5: 
+- 5 - (RED light - The number of unresolved accidents = 1)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 21
+ROAD_RESOLVED_EVENT - Removing accident from road from 0 to 5
+Cars on the road from 1 to 0: 
+5 5 - 6 - 7 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+7 - - (GREEN light)
+Cars on the road from 0 to 5: 
+- 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 22
+Cars on the road from 1 to 0: 
+- 5 6 - 7 7 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - 5 (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 23
+ROAD_ACCIDENT_EVENT - Adding accident to road from 1 to 0
+Cars on the road from 1 to 0: 
+5 - 6 7 - 7 (GREEN light - The number of unresolved accidents = 1)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 24
+Cars on the road from 1 to 0: 
+5 - 6 7 - 7 (RED light - The number of unresolved accidents = 1)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 25
+ROAD_ACCIDENT_EVENT - Adding accident to road from 1 to 0
+Cars on the road from 1 to 0: 
+5 - 6 7 - 7 (RED light - The number of unresolved accidents = 2)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 26
+Cars on the road from 1 to 0: 
+5 - 6 7 - 7 (GREEN light - The number of unresolved accidents = 2)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 27
+ROAD_RESOLVED_EVENT - Removing accident from road from 1 to 0
+Cars on the road from 1 to 0: 
+5 - 6 7 - 7 (GREEN light - The number of unresolved accidents = 1)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 28
+ROAD_RESOLVED_EVENT - Removing accident from road from 1 to 0
+Cars on the road from 1 to 0: 
+5 - 6 7 - 7 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (GREEN light)
+Cars on the road from 0 to 6: 
+6 6 - (GREEN light)
+Cars on the road from 0 to 7: 
+- - - (GREEN light)
+Car successfully traveled from 2 to 5 in 29 time steps.
+Car successfully traveled from 3 to 6 in 29 time steps.
+
+STEP 29
+Cars on the road from 1 to 0: 
+- 6 - 7 7 - (RED light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (RED light)
+Cars on the road from 0 to 5: 
+- 5 5 (RED light)
+Cars on the road from 0 to 6: 
+- 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 30
+Cars on the road from 1 to 0: 
+6 - 7 - 7 0 (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - 5 (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 31
+Cars on the road from 1 to 0: 
+6 7 - 7 - 0 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 32
+Cars on the road from 1 to 0: 
+- 7 7 - 0 - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 - 6 (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 33
+Cars on the road from 1 to 0: 
+7 - 7 0 - 0 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - - (RED light)
+
+STEP 34
+Cars on the road from 1 to 0: 
+- 7 - 0 0 - (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- - 7 (RED light)
+
+STEP 35
+Cars on the road from 1 to 0: 
+7 - 0 - 0 0 (RED light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+- 7 - (RED light)
+
+STEP 36
+Cars on the road from 1 to 0: 
+7 0 - 0 - 0 (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 37
+Cars on the road from 1 to 0: 
+- 0 0 - 0 - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (RED light)
+Cars on the road from 0 to 6: 
+6 6 - (RED light)
+Cars on the road from 0 to 7: 
+7 - 7 (RED light)
+
+STEP 38
+Cars on the road from 1 to 0: 
+0 - 0 0 - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 5 - (GREEN light)
+Cars on the road from 0 to 6: 
+6 6 - (GREEN light)
+Cars on the road from 0 to 7: 
+7 7 - (GREEN light)
+Car successfully traveled from 1 to 0 in 34 time steps.
+Car successfully traveled from 2 to 5 in 39 time steps.
+Car successfully traveled from 3 to 6 in 39 time steps.
+Car successfully traveled from 4 to 7 in 39 time steps.
+
+STEP 39
+Cars on the road from 1 to 0: 
+- 0 - 0 - - (RED light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (RED light)
+Cars on the road from 0 to 5: 
+- 5 - (RED light)
+Cars on the road from 0 to 6: 
+- 6 - (RED light)
+Cars on the road from 0 to 7: 
+- 7 - (RED light)
+
+STEP 40
+Cars on the road from 1 to 0: 
+0 - 0 - - - (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 41
+Cars on the road from 1 to 0: 
+0 0 - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+Car successfully traveled from 1 to 0 in 37 time steps.
+
+STEP 42
+Cars on the road from 1 to 0: 
+- 0 - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 43
+Cars on the road from 1 to 0: 
+0 - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+Car successfully traveled from 1 to 0 in 39 time steps.
+
+STEP 44
+Cars on the road from 1 to 0: 
+- - - - - - (RED light)
+Cars on the road from 2 to 1: 
+- - - (GREEN light)
+Cars on the road from 3 to 1: 
+- - - (RED light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 45
+Cars on the road from 1 to 0: 
+- - - - - - (RED light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 46
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 47
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (RED light)
+Cars on the road from 0 to 6: 
+6 - - (RED light)
+Cars on the road from 0 to 7: 
+7 - - (RED light)
+
+STEP 48
+Cars on the road from 1 to 0: 
+- - - - - - (GREEN light)
+Cars on the road from 2 to 1: 
+- - - (RED light)
+Cars on the road from 3 to 1: 
+- - - (GREEN light)
+Cars on the road from 4 to 1: 
+- - - (GREEN light)
+Cars on the road from 0 to 5: 
+5 - - (GREEN light)
+Cars on the road from 0 to 6: 
+6 - - (GREEN light)
+Cars on the road from 0 to 7: 
+7 - - (GREEN light)
+Car successfully traveled from 2 to 5 in 49 time steps.
+Car successfully traveled from 3 to 6 in 49 time steps.
+Car successfully traveled from 4 to 7 in 49 time steps.
+
+
+Average number of time steps to the reach their destination is 37.58.
+Maximum number of time steps to the reach their destination is 49.
+
+
+			FREE THE SIMULATION DATA
+
+
+------------------ END OF OUTPUT FOR ./InputFiles/data-Merge2.txt --------------------
+
+
+
+------------------ START OF OUTPUT FOR ./InputFiles/data-Complex.txt --------------------
+
+
+			READ DATA FROM FILE
+
+The roads:
+Created road from 0 to 1 with length 10 (green=0; red=4; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  G  G  G  G  R  G  G  G  G  R  G  G  G  G  R  G  G  G  G  R  G  G  G  G  R ...
+
+Created road from 1 to 2 with length 4 (green=1; red=2; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R ...
+
+Created road from 1 to 3 with length 2 (green=2; red=3; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R ...
+
+Created road from 1 to 4 with length 3 (green=3; red=4; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R ...
+
+Created road from 2 to 5 with length 3 (green=1; red=2; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R ...
+
+Created road from 2 to 6 with length 4 (green=2; red=3; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R ...
+
+Created road from 2 to 7 with length 5 (green=3; red=4; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R ...
+
+Created road from 3 to 5 with length 4 (green=1; red=2; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R ...
+
+Created road from 3 to 6 with length 3 (green=2; red=3; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R ...
+
+Created road from 3 to 7 with length 4 (green=3; red=4; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R ...
+
+Created road from 4 to 5 with length 5 (green=1; red=2; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R ...
+
+Created road from 4 to 6 with length 4 (green=2; red=3; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R ...
+
+Created road from 4 to 7 with length 3 (green=3; red=4; reset=5).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R  R  R  R  G  R ...
+
+Created road from 5 to 8 with length 4 (green=0; red=4; reset=8).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  G  G  G  G  R  R  R  R  G  G  G  G  R  R  R  R  G  G  G  G  R  R  R  R  G ...
+
+Created road from 6 to 8 with length 2 (green=1; red=5; reset=8).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  G  G  G  G  R  R  R  R  G  G  G  G  R  R  R  R  G  G  G  G  R  R  R  R ...
+
+Created road from 7 to 8 with length 3 (green=2; red=6; reset=8).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  G  G  G  G  R  R  R  R  G  G  G  G  R  R  R  R  G  G  G  G  R  R  R ...
+
+Created road from 8 to 9 with length 3 (green=3; red=7; reset=8).
+Cycle number:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 ...
+Light state :  R  R  R  G  G  G  G  R  R  R  R  G  G  G  G  R  R  R  R  G  G  G  G  R  R ...
+
+
+The add car events:
+ADD_CAR_EVENT       for time step   0 on road from   0 to   1.
+Destinations of added cars: 9, 8, 7, 6, 5
+ADD_CAR_EVENT       for time step  30 on road from   0 to   1.
+Destinations of added cars: 1, 1
+ADD_CAR_EVENT       for time step   0 on road from   1 to   2.
+Destinations of added cars: 5, 6, 7, 8, 9
+ADD_CAR_EVENT       for time step   0 on road from   1 to   3.
+Destinations of added cars: 5, 6, 7, 8, 9
+ADD_CAR_EVENT       for time step   0 on road from   1 to   4.
+Destinations of added cars: 5, 6, 7, 8, 9
+ADD_CAR_EVENT       for time step   0 on road from   3 to   5.
+Destinations of added cars: 9
+ADD_CAR_EVENT       for time step   0 on road from   3 to   6.
+Destinations of added cars: 9
+ADD_CAR_EVENT       for time step   0 on road from   4 to   7.
+Destinations of added cars: 9
+
+
+The road accident/resolved events:
+ROAD_ACCIDENT_EVENT for time step  11 on road from   8 to   9.
+ROAD_RESOLVED_EVENT for time step  16 on road from   8 to   9.
+ROAD_ACCIDENT_EVENT for time step  13 on road from   8 to   9.
+ROAD_RESOLVED_EVENT for time step  21 on road from   8 to   9.
+ROAD_ACCIDENT_EVENT for time step  20 on road from   8 to   9.
+ROAD_RESOLVED_EVENT for time step  25 on road from   8 to   9.
+ROAD_ACCIDENT_EVENT for time step  12 on road from   8 to   9.
+ROAD_RESOLVED_EVENT for time step  17 on road from   8 to   9.
+ROAD_ACCIDENT_EVENT for time step  65 on road from   0 to   1.
+ROAD_RESOLVED_EVENT for time step  70 on road from   0 to   1.
+
+
+			SIMULATE THE ROAD NETWORK
+
+STEP 0
+ADD_CAR_EVENT - Cars enqueued on road from 0 to 1
+ADD_CAR_EVENT - Cars enqueued on road from 1 to 2
+ADD_CAR_EVENT - Cars enqueued on road from 1 to 3
+ADD_CAR_EVENT - Cars enqueued on road from 1 to 4
+ADD_CAR_EVENT - Cars enqueued on road from 3 to 5
+ADD_CAR_EVENT - Cars enqueued on road from 3 to 6
+ADD_CAR_EVENT - Cars enqueued on road from 4 to 7
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 1
+Cars on the road from 0 to 1: 
+- - - - - - - - - 9 (GREEN light)
+Cars on the road from 1 to 2: 
+- - - 5 (GREEN light)
+Cars on the road from 1 to 3: 
+- 5 (RED light)
+Cars on the road from 1 to 4: 
+- - 5 (RED light)
+Cars on the road from 2 to 5: 
+- - - (GREEN light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - 9 (GREEN light)
+Cars on the road from 3 to 6: 
+- - 9 (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (GREEN light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - 9 (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 2
+Cars on the road from 0 to 1: 
+- - - - - - - - 9 - (GREEN light)
+Cars on the road from 1 to 2: 
+- - 5 - (RED light)
+Cars on the road from 1 to 3: 
+5 - (GREEN light)
+Cars on the road from 1 to 4: 
+- 5 - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (GREEN light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - 9 - (RED light)
+Cars on the road from 3 to 6: 
+- 9 - (GREEN light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (GREEN light)
+Cars on the road from 4 to 7: 
+- 9 - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 3
+Cars on the road from 0 to 1: 
+- - - - - - - 9 - 8 (GREEN light)
+Cars on the road from 1 to 2: 
+- 5 - 6 (RED light)
+Cars on the road from 1 to 3: 
+- 6 (RED light)
+Cars on the road from 1 to 4: 
+5 - 6 (GREEN light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (GREEN light)
+Cars on the road from 3 to 5: 
+- 9 - 5 (RED light)
+Cars on the road from 3 to 6: 
+9 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (GREEN light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+9 - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+
+STEP 4
+Cars on the road from 0 to 1: 
+- - - - - - 9 - 8 - (RED light)
+Cars on the road from 1 to 2: 
+5 - 6 - (RED light)
+Cars on the road from 1 to 3: 
+6 - (RED light)
+Cars on the road from 1 to 4: 
+- 6 - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+9 - 5 - (RED light)
+Cars on the road from 3 to 6: 
+9 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - 5 (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - 9 (GREEN light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+
+STEP 5
+Cars on the road from 0 to 1: 
+- - - - - 9 - 8 - 7 (GREEN light)
+Cars on the road from 1 to 2: 
+5 6 - 7 (RED light)
+Cars on the road from 1 to 3: 
+6 7 (RED light)
+Cars on the road from 1 to 4: 
+6 - 7 (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+9 5 - - (RED light)
+Cars on the road from 3 to 6: 
+9 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - 5 - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+- 9 - (GREEN light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+
+STEP 6
+Cars on the road from 0 to 1: 
+- - - - 9 - 8 - 7 - (GREEN light)
+Cars on the road from 1 to 2: 
+5 6 7 - (GREEN light)
+Cars on the road from 1 to 3: 
+6 7 (RED light)
+Cars on the road from 1 to 4: 
+6 7 - (RED light)
+Cars on the road from 2 to 5: 
+- - - (GREEN light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+9 5 - - (GREEN light)
+Cars on the road from 3 to 6: 
+9 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - 5 - - (GREEN light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+9 - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+
+STEP 7
+Cars on the road from 0 to 1: 
+- - - 9 - 8 - 7 - 6 (GREEN light)
+Cars on the road from 1 to 2: 
+- 6 7 8 (RED light)
+Cars on the road from 1 to 3: 
+6 7 (GREEN light)
+Cars on the road from 1 to 4: 
+6 7 8 (RED light)
+Cars on the road from 2 to 5: 
+- - 5 (RED light)
+Cars on the road from 2 to 6: 
+- - - - (GREEN light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- 5 - - (RED light)
+Cars on the road from 3 to 6: 
+9 - - (GREEN light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- 5 - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (GREEN light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - 9 (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+9 - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 8
+Cars on the road from 0 to 1: 
+- - 9 - 8 - 7 - 6 - (GREEN light)
+Cars on the road from 1 to 2: 
+6 - 7 8 (RED light)
+Cars on the road from 1 to 3: 
+- 7 (RED light)
+Cars on the road from 1 to 4: 
+6 7 8 (GREEN light)
+Cars on the road from 2 to 5: 
+- 5 - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (GREEN light)
+Cars on the road from 3 to 5: 
+5 - - - (RED light)
+Cars on the road from 3 to 6: 
+- - 6 (RED light)
+Cars on the road from 3 to 7: 
+- - - - (GREEN light)
+Cars on the road from 4 to 5: 
+5 - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - 9 - (GREEN light)
+Cars on the road from 6 to 8: 
+- 9 (RED light)
+Cars on the road from 7 to 8: 
+9 - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 9
+Cars on the road from 0 to 1: 
+- 9 - 8 - 7 - 6 - 5 (RED light)
+Cars on the road from 1 to 2: 
+6 7 - 8 (RED light)
+Cars on the road from 1 to 3: 
+7 - (RED light)
+Cars on the road from 1 to 4: 
+- 7 8 (RED light)
+Cars on the road from 2 to 5: 
+5 - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+5 - - - (RED light)
+Cars on the road from 3 to 6: 
+- 6 - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+5 - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - 6 (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- 9 - - (GREEN light)
+Cars on the road from 6 to 8: 
+9 - (GREEN light)
+Cars on the road from 7 to 8: 
+9 - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 10
+Cars on the road from 0 to 1: 
+9 - 8 - 7 - 6 - 5 - (GREEN light)
+Cars on the road from 1 to 2: 
+6 7 8 - (RED light)
+Cars on the road from 1 to 3: 
+7 8 (RED light)
+Cars on the road from 1 to 4: 
+7 - 8 (RED light)
+Cars on the road from 2 to 5: 
+5 - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+5 - - - (RED light)
+Cars on the road from 3 to 6: 
+6 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+5 - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - 6 - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+9 - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+9 - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - 9 (RED light)
+
+STEP 11
+ROAD_ACCIDENT_EVENT - Adding accident to road from 8 to 9
+Cars on the road from 0 to 1: 
+9 8 - 7 - 6 - 5 - - (GREEN light)
+Cars on the road from 1 to 2: 
+6 7 8 9 (GREEN light)
+Cars on the road from 1 to 3: 
+7 8 (RED light)
+Cars on the road from 1 to 4: 
+7 8 - (RED light)
+Cars on the road from 2 to 5: 
+5 - - (GREEN light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+5 - - - (GREEN light)
+Cars on the road from 3 to 6: 
+6 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+5 - - - - (GREEN light)
+Cars on the road from 4 to 6: 
+- 6 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+9 - - (GREEN light)
+Cars on the road from 8 to 9: 
+- 9 9 (GREEN light - The number of unresolved accidents = 1)
+Car successfully traveled from 1 to 5 in 12 time steps.
+Car successfully traveled from 1 to 5 in 12 time steps.
+Car successfully traveled from 1 to 5 in 12 time steps.
+
+STEP 12
+ROAD_ACCIDENT_EVENT - Adding accident to road from 8 to 9
+Cars on the road from 0 to 1: 
+9 8 7 - 6 - 5 - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- 7 8 9 (RED light)
+Cars on the road from 1 to 3: 
+7 8 (GREEN light)
+Cars on the road from 1 to 4: 
+7 8 9 (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - 6 (GREEN light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+6 - - (GREEN light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+6 - - - (GREEN light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+9 - - (GREEN light)
+Cars on the road from 8 to 9: 
+- 9 9 (GREEN light - The number of unresolved accidents = 2)
+Car successfully traveled from 1 to 6 in 13 time steps.
+Car successfully traveled from 1 to 6 in 13 time steps.
+
+STEP 13
+ROAD_ACCIDENT_EVENT - Adding accident to road from 8 to 9
+Cars on the road from 0 to 1: 
+9 8 7 6 - 5 - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+7 - 8 9 (RED light)
+Cars on the road from 1 to 3: 
+- 8 (RED light)
+Cars on the road from 1 to 4: 
+7 8 9 (GREEN light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - 6 - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (GREEN light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - 7 (GREEN light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+9 - - (GREEN light)
+Cars on the road from 8 to 9: 
+- 9 9 (GREEN light - The number of unresolved accidents = 3)
+
+STEP 14
+Cars on the road from 0 to 1: 
+- 8 7 6 5 - - - - - (RED light)
+Cars on the road from 1 to 2: 
+7 8 - 9 (RED light)
+Cars on the road from 1 to 3: 
+8 9 (RED light)
+Cars on the road from 1 to 4: 
+- 8 9 (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- 6 - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - 7 - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - 7 (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+9 - - (RED light)
+Cars on the road from 8 to 9: 
+- 9 9 (GREEN light - The number of unresolved accidents = 3)
+
+STEP 15
+Cars on the road from 0 to 1: 
+8 - 7 6 5 - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+7 8 9 - (RED light)
+Cars on the road from 1 to 3: 
+8 9 (RED light)
+Cars on the road from 1 to 4: 
+8 - 9 (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+6 - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- 7 - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- 7 - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+9 - - (RED light)
+Cars on the road from 8 to 9: 
+- 9 9 (RED light - The number of unresolved accidents = 3)
+
+STEP 16
+ROAD_RESOLVED_EVENT - Removing accident from road from 8 to 9
+Cars on the road from 0 to 1: 
+8 7 - 6 5 - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+7 8 9 - (GREEN light)
+Cars on the road from 1 to 3: 
+8 9 (RED light)
+Cars on the road from 1 to 4: 
+8 9 - (RED light)
+Cars on the road from 2 to 5: 
+- - - (GREEN light)
+Cars on the road from 2 to 6: 
+6 - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (GREEN light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+7 - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (GREEN light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+7 - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+9 - - (RED light)
+Cars on the road from 8 to 9: 
+- 9 9 (RED light - The number of unresolved accidents = 2)
+
+STEP 17
+ROAD_RESOLVED_EVENT - Removing accident from road from 8 to 9
+Cars on the road from 0 to 1: 
+8 7 6 - 5 - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- 8 9 - (RED light)
+Cars on the road from 1 to 3: 
+8 9 (GREEN light)
+Cars on the road from 1 to 4: 
+8 9 - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+6 - - - (GREEN light)
+Cars on the road from 2 to 7: 
+- - - - 7 (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (GREEN light)
+Cars on the road from 3 to 7: 
+7 - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (GREEN light)
+Cars on the road from 4 to 7: 
+7 - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+9 - - (RED light)
+Cars on the road from 8 to 9: 
+- 9 9 (RED light - The number of unresolved accidents = 1)
+Car successfully traveled from 1 to 6 in 18 time steps.
+
+STEP 18
+Cars on the road from 0 to 1: 
+8 7 6 5 - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+8 - 9 - (RED light)
+Cars on the road from 1 to 3: 
+- 9 (RED light)
+Cars on the road from 1 to 4: 
+8 9 - (GREEN light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - 7 - (GREEN light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - 8 (RED light)
+Cars on the road from 3 to 7: 
+7 - - - (GREEN light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+7 - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+9 - - (GREEN light)
+Cars on the road from 8 to 9: 
+- 9 9 (RED light - The number of unresolved accidents = 1)
+Car successfully traveled from 1 to 7 in 19 time steps.
+Car successfully traveled from 1 to 7 in 19 time steps.
+
+STEP 19
+Cars on the road from 0 to 1: 
+- 7 6 5 - - - - - - (RED light)
+Cars on the road from 1 to 2: 
+8 9 - - (RED light)
+Cars on the road from 1 to 3: 
+9 8 (RED light)
+Cars on the road from 1 to 4: 
+- 9 - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - 7 - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- 8 - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - 8 (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+9 - - (GREEN light)
+Cars on the road from 8 to 9: 
+- 9 9 (GREEN light - The number of unresolved accidents = 1)
+
+STEP 20
+ROAD_ACCIDENT_EVENT - Adding accident to road from 8 to 9
+Cars on the road from 0 to 1: 
+7 - 6 5 - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+8 9 - - (RED light)
+Cars on the road from 1 to 3: 
+9 8 (RED light)
+Cars on the road from 1 to 4: 
+9 - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- 7 - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+8 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - 8 - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+9 - - (GREEN light)
+Cars on the road from 8 to 9: 
+- 9 9 (GREEN light - The number of unresolved accidents = 2)
+
+STEP 21
+ROAD_RESOLVED_EVENT - Removing accident from road from 8 to 9
+Cars on the road from 0 to 1: 
+7 6 - 5 - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+8 9 - - (GREEN light)
+Cars on the road from 1 to 3: 
+9 8 (RED light)
+Cars on the road from 1 to 4: 
+9 - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (GREEN light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+7 - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (GREEN light)
+Cars on the road from 3 to 6: 
+8 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (GREEN light)
+Cars on the road from 4 to 6: 
+- 8 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+9 - - (GREEN light)
+Cars on the road from 8 to 9: 
+- 9 9 (GREEN light - The number of unresolved accidents = 1)
+
+STEP 22
+Cars on the road from 0 to 1: 
+7 6 5 - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- 9 - - (RED light)
+Cars on the road from 1 to 3: 
+9 8 (GREEN light)
+Cars on the road from 1 to 4: 
+9 - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - 8 (GREEN light)
+Cars on the road from 2 to 7: 
+7 - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+8 - - (GREEN light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 - - - (GREEN light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+9 - - (RED light)
+Cars on the road from 8 to 9: 
+- 9 9 (GREEN light - The number of unresolved accidents = 1)
+
+STEP 23
+Cars on the road from 0 to 1: 
+7 6 5 - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+9 - - - (RED light)
+Cars on the road from 1 to 3: 
+- 8 (RED light)
+Cars on the road from 1 to 4: 
+9 - - (GREEN light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - 8 - (RED light)
+Cars on the road from 2 to 7: 
+7 - - - - (GREEN light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - 9 (RED light)
+Cars on the road from 3 to 7: 
+- - - - (GREEN light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- 8 (RED light)
+Cars on the road from 7 to 8: 
+9 - - (RED light)
+Cars on the road from 8 to 9: 
+- 9 9 (RED light - The number of unresolved accidents = 1)
+Car successfully traveled from 1 to 7 in 24 time steps.
+
+STEP 24
+Cars on the road from 0 to 1: 
+- 6 5 - - - - - - - (RED light)
+Cars on the road from 1 to 2: 
+9 - - - (RED light)
+Cars on the road from 1 to 3: 
+8 7 (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- 8 - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- 9 - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 - - 9 (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+8 - (RED light)
+Cars on the road from 7 to 8: 
+9 - - (RED light)
+Cars on the road from 8 to 9: 
+- 9 9 (RED light - The number of unresolved accidents = 1)
+
+STEP 25
+ROAD_RESOLVED_EVENT - Removing accident from road from 8 to 9
+Cars on the road from 0 to 1: 
+6 - 5 - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+9 - - - (RED light)
+Cars on the road from 1 to 3: 
+8 7 (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+8 - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+9 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 - 9 - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+8 - (GREEN light)
+Cars on the road from 7 to 8: 
+9 - - (RED light)
+Cars on the road from 8 to 9: 
+- 9 9 (RED light)
+Car successfully traveled from 1 to 8 in 26 time steps.
+
+STEP 26
+Cars on the road from 0 to 1: 
+6 5 - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+9 - - - (GREEN light)
+Cars on the road from 1 to 3: 
+8 7 (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (GREEN light)
+Cars on the road from 2 to 6: 
+8 - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (GREEN light)
+Cars on the road from 3 to 6: 
+9 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (GREEN light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+9 - - (GREEN light)
+Cars on the road from 8 to 9: 
+9 - 9 (RED light)
+
+STEP 27
+Cars on the road from 0 to 1: 
+6 5 - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+8 7 (GREEN light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+8 - - 9 (GREEN light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+9 - - (GREEN light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (GREEN light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+9 9 9 (GREEN light)
+Car successfully traveled from 3 to 9 in 28 time steps.
+
+STEP 28
+Cars on the road from 0 to 1: 
+6 5 - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- 7 (RED light)
+Cars on the road from 1 to 4: 
+- - - (GREEN light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - 9 - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (GREEN light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+9 - 8 (RED light)
+Cars on the road from 3 to 7: 
+- - - - (GREEN light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- 8 (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- 9 9 (GREEN light)
+
+STEP 29
+Cars on the road from 0 to 1: 
+- 5 - - - - - - - - (RED light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+7 6 (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- 9 - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+9 8 - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+8 - (RED light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+9 - 9 (GREEN light)
+Car successfully traveled from 3 to 9 in 30 time steps.
+
+STEP 30
+ADD_CAR_EVENT - Cars enqueued on road from 0 to 1
+Cars on the road from 0 to 1: 
+5 - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+7 6 (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+9 - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+9 8 - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+8 - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- 9 - (GREEN light)
+
+STEP 31
+Cars on the road from 0 to 1: 
+5 - - - - - - - - 1 (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (GREEN light)
+Cars on the road from 1 to 3: 
+7 6 (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (GREEN light)
+Cars on the road from 2 to 6: 
+9 - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (GREEN light)
+Cars on the road from 3 to 6: 
+9 8 - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (GREEN light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+8 - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+9 - - (RED light)
+
+STEP 32
+Cars on the road from 0 to 1: 
+5 - - - - - - - 1 - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+7 6 (GREEN light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+9 - - - (GREEN light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+9 8 - (GREEN light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (GREEN light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+8 - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+9 - - (RED light)
+
+STEP 33
+Cars on the road from 0 to 1: 
+5 - - - - - - 1 - 1 (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- 6 (RED light)
+Cars on the road from 1 to 4: 
+- - - (GREEN light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (GREEN light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+9 8 - (RED light)
+Cars on the road from 3 to 7: 
+- - - 7 (GREEN light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+8 9 (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+9 - - (RED light)
+Car successfully traveled from 1 to 8 in 34 time steps.
+
+STEP 34
+Cars on the road from 0 to 1: 
+- - - - - - 1 - 1 - (RED light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+6 5 (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+9 8 - (RED light)
+Cars on the road from 3 to 7: 
+- - 7 - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- 9 (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+9 - - (RED light)
+
+STEP 35
+Cars on the road from 0 to 1: 
+- - - - - 1 - 1 - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+6 5 (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+9 8 - (RED light)
+Cars on the road from 3 to 7: 
+- 7 - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+9 - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+9 - - (GREEN light)
+Car successfully traveled from 4 to 9 in 36 time steps.
+
+STEP 36
+Cars on the road from 0 to 1: 
+- - - - 1 - 1 - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (GREEN light)
+Cars on the road from 1 to 3: 
+6 5 (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (GREEN light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (GREEN light)
+Cars on the road from 3 to 6: 
+9 8 - (RED light)
+Cars on the road from 3 to 7: 
+7 - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (GREEN light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - 9 (GREEN light)
+
+STEP 37
+Cars on the road from 0 to 1: 
+- - - 1 - 1 - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+6 5 (GREEN light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (GREEN light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+9 8 - (GREEN light)
+Cars on the road from 3 to 7: 
+7 - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (GREEN light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- 9 - (GREEN light)
+
+STEP 38
+Cars on the road from 0 to 1: 
+- - 1 - 1 - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- 5 (RED light)
+Cars on the road from 1 to 4: 
+- - - (GREEN light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (GREEN light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- 8 6 (RED light)
+Cars on the road from 3 to 7: 
+7 - - - (GREEN light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- 9 (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+9 - - (GREEN light)
+Car successfully traveled from 0 to 7 in 39 time steps.
+Car successfully traveled from 1 to 9 in 39 time steps.
+
+STEP 39
+Cars on the road from 0 to 1: 
+- 1 - 1 - - - - - - (RED light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+5 - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+8 - 6 (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+9 - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 40
+Cars on the road from 0 to 1: 
+1 - 1 - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+5 9 (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+8 6 - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+9 - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+Car successfully traveled from 0 to 1 in 11 time steps.
+
+STEP 41
+Cars on the road from 0 to 1: 
+- 1 - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (GREEN light)
+Cars on the road from 1 to 3: 
+5 9 (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (GREEN light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (GREEN light)
+Cars on the road from 3 to 6: 
+8 6 - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (GREEN light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+9 - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 42
+Cars on the road from 0 to 1: 
+1 - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+5 9 (GREEN light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (GREEN light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+8 6 - (GREEN light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (GREEN light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - 9 (RED light)
+Car successfully traveled from 0 to 1 in 13 time steps.
+
+STEP 43
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- 9 (RED light)
+Cars on the road from 1 to 4: 
+- - - (GREEN light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (GREEN light)
+Cars on the road from 3 to 5: 
+- - - 5 (RED light)
+Cars on the road from 3 to 6: 
+- 6 - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (GREEN light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- 8 (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- 9 - (GREEN light)
+
+STEP 44
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (RED light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+9 - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - 5 - (RED light)
+Cars on the road from 3 to 6: 
+6 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+8 - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+9 - - (GREEN light)
+Car successfully traveled from 0 to 8 in 45 time steps.
+Car successfully traveled from 0 to 9 in 45 time steps.
+
+STEP 45
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+9 - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- 5 - - (RED light)
+Cars on the road from 3 to 6: 
+6 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+
+STEP 46
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (GREEN light)
+Cars on the road from 1 to 3: 
+9 - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (GREEN light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+5 - - - (GREEN light)
+Cars on the road from 3 to 6: 
+6 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (GREEN light)
+Cars on the road from 4 to 6: 
+8 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+Car successfully traveled from 0 to 5 in 47 time steps.
+
+STEP 47
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+9 - (GREEN light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (GREEN light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+6 - - (GREEN light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+8 9 - - (GREEN light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+Car successfully traveled from 0 to 6 in 48 time steps.
+
+STEP 48
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (GREEN light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (GREEN light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - 9 (RED light)
+Cars on the road from 3 to 7: 
+- - - - (GREEN light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- 9 - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- 8 (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 49
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (RED light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- 9 - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+9 - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+8 - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+Car successfully traveled from 1 to 8 in 50 time steps.
+
+STEP 50
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+9 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+9 - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 51
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (GREEN light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (GREEN light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (GREEN light)
+Cars on the road from 3 to 6: 
+9 - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (GREEN light)
+Cars on the road from 4 to 6: 
+9 - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+
+STEP 52
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (GREEN light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (GREEN light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+9 - - (GREEN light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+9 - - - (GREEN light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+
+STEP 53
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (GREEN light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (GREEN light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (GREEN light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+9 - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- 9 (RED light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+
+STEP 54
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (RED light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+9 - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+9 - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+
+STEP 55
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+9 - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+9 - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 56
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (GREEN light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (GREEN light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (GREEN light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (GREEN light)
+Cars on the road from 4 to 6: 
+9 - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+9 - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 57
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (GREEN light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (GREEN light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (GREEN light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+9 - - - (GREEN light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+9 - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 58
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (GREEN light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (GREEN light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (GREEN light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- 9 (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - 9 (RED light)
+
+STEP 59
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (RED light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+9 - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- 9 - (GREEN light)
+
+STEP 60
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+9 - 9 (GREEN light)
+Car successfully traveled from 1 to 9 in 61 time steps.
+
+STEP 61
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (GREEN light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (GREEN light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (GREEN light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (GREEN light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- 9 - (GREEN light)
+
+STEP 62
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (GREEN light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (GREEN light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (GREEN light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (GREEN light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+9 - - (GREEN light)
+Car successfully traveled from 1 to 9 in 63 time steps.
+
+STEP 63
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (GREEN light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (GREEN light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (GREEN light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 64
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (RED light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 65
+ROAD_ACCIDENT_EVENT - Adding accident to road from 0 to 1
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light - The number of unresolved accidents = 1)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 66
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light - The number of unresolved accidents = 1)
+Cars on the road from 1 to 2: 
+- - - - (GREEN light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (GREEN light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (GREEN light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (GREEN light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - - (RED light)
+
+STEP 67
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light - The number of unresolved accidents = 1)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (GREEN light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (GREEN light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (GREEN light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (GREEN light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (GREEN light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+
+STEP 68
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light - The number of unresolved accidents = 1)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (GREEN light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (GREEN light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (GREEN light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (GREEN light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (GREEN light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+
+STEP 69
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (RED light - The number of unresolved accidents = 1)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+- - - (GREEN light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+
+STEP 70
+ROAD_RESOLVED_EVENT - Removing accident from road from 0 to 1
+Cars on the road from 0 to 1: 
+- - - - - - - - - - (GREEN light)
+Cars on the road from 1 to 2: 
+- - - - (RED light)
+Cars on the road from 1 to 3: 
+- - (RED light)
+Cars on the road from 1 to 4: 
+- - - (RED light)
+Cars on the road from 2 to 5: 
+- - - (RED light)
+Cars on the road from 2 to 6: 
+- - - - (RED light)
+Cars on the road from 2 to 7: 
+- - - - - (RED light)
+Cars on the road from 3 to 5: 
+- - - - (RED light)
+Cars on the road from 3 to 6: 
+- - - (RED light)
+Cars on the road from 3 to 7: 
+- - - - (RED light)
+Cars on the road from 4 to 5: 
+- - - - - (RED light)
+Cars on the road from 4 to 6: 
+- - - - (RED light)
+Cars on the road from 4 to 7: 
+- - - (RED light)
+Cars on the road from 5 to 8: 
+- - - - (RED light)
+Cars on the road from 6 to 8: 
+- - (RED light)
+Cars on the road from 7 to 8: 
+- - - (RED light)
+Cars on the road from 8 to 9: 
+- - - (GREEN light)
+
+
+Average number of time steps to the reach their destination is 30.28.
+Maximum number of time steps to the reach their destination is 63.
+
+
+			FREE THE SIMULATION DATA
+
+
+------------------ END OF OUTPUT FOR ./InputFiles/data-Complex.txt --------------------
+
+
+This solution was completed by:
+<student name #1>
+<student name #2 (if no partner write "N/A")>
+
