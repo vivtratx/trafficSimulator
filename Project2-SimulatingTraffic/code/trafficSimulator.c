@@ -84,6 +84,7 @@ TrafficData* createTrafficData(char* filename) {
 
      // Store the array of roads in traffic data
      myTrafficData->arrayOfRoads = roadArray;
+     myTrafficData->numRoads = 0;
 
      /*
      * You'll add edges to a graph to represent each road using `setEdge` (see
@@ -109,6 +110,9 @@ TrafficData* createTrafficData(char* filename) {
 	     }
 	     setEdge( myTrafficData->roadGraph, from, to, length );
 	     Road* currRoad = createRoad( from, to, length, greenOn, greenOff, reset );
+	     // Put in roadArray
+	     myTrafficData->arrayOfRoads[i] = currRoad;
+	     myTrafficData->numRoads++;
 	     setEdgeData( myTrafficData->roadGraph, from, to, currRoad );
      }
 
@@ -153,6 +157,7 @@ TrafficData* createTrafficData(char* filename) {
 		    Car* currCar = createCar(timeStep, from, to, dest);
 		    //Put each car into the queue
 		    enqueue(currQueue, currCar);
+		    myTrafficData->numCars++;
 	    }
 	    
 	    //call createAddCarEvent to put queue into PQ
@@ -206,54 +211,56 @@ void trafficSimulator(TrafficData* pTrafficData) {
      * the project */
 
      int i = 0;
+     int j = 0;
      int step = 0;
      int totalSteps = step;
+     int max = 0;
+     double avg = 0.0;
 
-     while( !isEmptyPQ(pTrafficData->eventQueue) && (pTrafficData->numCars>0) && (step<1000) ){
+     // Issue with while loop wont be seen until cars are deleted
+
+     while( ((step<1000) && (!isEmptyPQ(pTrafficData->eventQueue))) && (pTrafficData->numCars>0) ){
 
         /* Print the current step number */
-	printf("Step: %d\n", step);
+	printf("STEP %d\n", step);
 
         /* Update the state of every traffic light */
 
-	Road* currRoad;
-
 	for(i = 0; i < pTrafficData->numRoads; i++){ //Update every road
-		currRoad = pTrafficData->arrayOfRoads[i];
+		Road* currRoad = pTrafficData->arrayOfRoads[i];
 
 		// Don't need to worry about resetting, modulo takes care of those cases
 
 		// If our current step == greenOn
-		if(step % currRoad->lightCycleLength == currRoad->greenStartTime){
+		if(step % currRoad->lightCycleLength == currRoad->greenStartTime  && step % currRoad->lightCycleLength < currRoad->greenEndTime){
 			currRoad->currentLightState = GREEN_LIGHT;
 		}
 
 		// If our current step == greenOff
-		if(step % currRoad->lightCycleLength == currRoad->greenEndTime){
+		else{
 			currRoad->currentLightState = RED_LIGHT;
 		}
 	}
 
 
         /* Loop on events associated with this time step */
-	Event* currEvent;
 
-	while( !isEmptyPQ(pTrafficData->eventQueue) )
+
+	while( !isEmptyPQ(pTrafficData->eventQueue) && getFrontPriority(pTrafficData->eventQueue) == step ) // does event queue need to go till empty?
         {
 		// Only dequeue if there is an event on this timeStep
 		// Get front priority 
 		// If it's equal to the current timestep then dequeue
-		if ( getFrontPriority(pTrafficData->eventQueue) == step ){
-			currEvent = dequeuePQ(pTrafficData->eventQueue);
-		}
+
+		Event* currEvent = dequeuePQ(pTrafficData->eventQueue);
 
             /* If ADD_CAR_EVENT, use mergeQueues from queue.h to add the queue
              * of cars to the queue of the road associated with the event */
 	     	if( currEvent->eventCode == ADD_CAR_EVENT ){
 
 			// Takes the contents of one queue and puts it into a different queued
-			Road* roadWithEvent = currEvent->pRoad;	
-			mergeQueues( roadWithEvent->waitingCars, currEvent->pCarQueue );
+			mergeQueues( currEvent->pRoad->waitingCars, currEvent->pCarQueue );
+			printf("ADD_CAR_EVENT - Cars enqueued on road from %d to %d\n", currEvent->pRoad->from, currEvent->pRoad->to);
 
 		}
 
@@ -261,18 +268,22 @@ void trafficSimulator(TrafficData* pTrafficData) {
              * associated with the event */
 	     // get this value from the current event
 	     	if( currEvent->eventCode == ROAD_ACCIDENT_EVENT ){
-			Road* roadWithEvent = currEvent->pRoad;
-			roadWithEvent->numAccidents += 1; //access the road and then num accidents?
+			// numAccidents isn't initially set to anything... is this an issue?
+			currEvent->pRoad->numAccidents += 1; //access the road and then num accidents?
+			printf("ROAD_ACCIDENT_EVENT - Adding accident to road from %d to %d\n", currEvent->pRoad->from, currEvent->pRoad->to);
+
 		}
 
             /* If ROAD_RESOLVED_EVENT, subtract one from the numAccidents of the
              * road associated with the event */
 	     // from current event to get this value to subtract
 	     	if( currEvent->eventCode == ROAD_RESOLVED_EVENT ){
-			Road* roadWithEvent = currEvent->pRoad;
-			roadWithEvent->numAccidents -= 1;
+			currEvent->pRoad->numAccidents -= 1;
+			printf("ROAD_RESOLVED_EVENT - Removing accident from road from %d to %d\n", currEvent->pRoad->from, currEvent->pRoad->to);
 		}
+		freeEvent(currEvent);
         }
+
 
 	 /* Print the contents of each road (use the provided function
          * printRoadContents) */
@@ -281,33 +292,169 @@ void trafficSimulator(TrafficData* pTrafficData) {
 
 	}
 
+	// Loop to set all cars moved boolean to false
+	for( i = 0; i < pTrafficData->numRoads; i++){
 
-        /* For each road, try to move waiting cars onto the end of that road if // ANOTHER LOOP
-         * possible (remember to check that numAccidents==0 for the road) */ // Check the waiting queue, and if can be placed then put the car
+		 // Inner loop to set all cars moved to false
+		 Road* currRoad = pTrafficData->arrayOfRoads[i];
+
+		 for( j = 0; j < currRoad->length; j++){
+			 if( currRoad->roadContents[j] != NULL ){
+				 currRoad->roadContents[j]->moved = false;
+			 }
+		 }
+	}
+
+
+        /* For each road, try to move waiting cars onto the end of that road if
+         * possible (remember to check that numAccidents==0 for the road) */
+	 // CHECK WAITING QUEUE, IF CAN BE PLACED THEN PUT THE CAR
+
 	 for(i = 0; i < pTrafficData->numRoads; i++){
-		 currRoad = pTrafficData->arrayOfRoads[i];
-		 if( currRoad->numAccidents == 0 ){
-			 // Check if it's like NULL or something?
-			 //currRoad->waitingCars
-		 //Check waiting queue, if can be placed then put the car
+		 Road* currRoad = pTrafficData->arrayOfRoads[i];
+		 // If there are cars in the waitingCars queue and there is no accident on the road
+		 if( !isEmpty(currRoad->waitingCars) && currRoad->roadContents[currRoad->length-1] == NULL && (currRoad->numAccidents == 0) ){
+
+			 if( currRoad->roadContents[currRoad->length - 1] == NULL ){ // if nothing at end of road
+				 Car* newCar = dequeue(currRoad->waitingCars);
+				 //newCar->stepAdded = step;
+				 // Put the car
+				 currRoad->roadContents[currRoad->length - 1] = newCar;
+				 //newCar->stepAdded = step;
+				 newCar->moved = true;
+			 }
+
 		 }
 	 }
+	 
 
-        /* For each road, try to move cars, which haven't already moved, forward
+        /* For each road, try to move cars, which haven't already moved, forward 	MOVE THROUGH THE ROADS
          * one space on every road (remember to check that numAccidents==0 for
          * the road)
          */
+	 for( i = 0; i < pTrafficData->numRoads; i++){
+		 // Move cars one space if there are no accidents on the road
+		 Road* currRoad = pTrafficData->arrayOfRoads[i];
 
-        /* For each road, try to move cars, which haven't already moved, through
+		 for(j = (currRoad->length-1); j >0; j--){ // road end to the start
+			 // If there are no accidents, then move car
+			 // Check if there is space for car, car has not moved already
+			 Car *currCar = currRoad->roadContents[j];
+			 if( currCar != NULL   && currCar->moved == false && currRoad->numAccidents == 0 ){
+				 if(currRoad->roadContents[j-1] == NULL){
+					 currRoad->roadContents[j-1] = currCar;
+					 currRoad->roadContents[j] = NULL;
+					 currCar->moved = true;
+                         }
+			 }
+
+
+		 }
+	 }
+
+        /* For each road, try to move cars, which haven't already moved, through 	MOVE THROUGH INTERSECTIONS
          * the next intersection (remember to check that numAccidents==0 for
          * both roads)
          */
+
+	 /*
+	 
+	 bool res = false;
+	 int nextIntersection = 0;
+	 for( i = 0; i < pTrafficData->numRoads; i++){
+		 // Move cars through intersections if:
+		 //there are no accidents on the road, they havent alr moved, green light, and next road has empty space at end of array (len-1)
+		 // otherwise, it remains at the front of its current road
+		 Road* currRoad = pTrafficData->arrayOfRoads[i];
+		 Car* frontCar = currRoad->roadContents[0];
+		 Road* nextRoad = NULL;
+
+		 if( (frontCar != NULL) && (currRoad->currentLightState == GREEN_LIGHT) && (currRoad->numAccidents == 0) ){
+		 if( frontCar->destination != nextIntersection ){
+
+		 res = getNextOnShortestPath(pTrafficData->roadGraph, currRoad->to, frontCar->destination, &nextIntersection);
+		 if( res ){ // should always be true but still might wanna error check
+			 // Get next road getEdgeData?
+			 nextRoad = getEdgeData(pTrafficData->roadGraph, currRoad->to, nextIntersection);
+			 printf("Next intersection is: %d\n", nextIntersection);
+			 // Next road end is empty & no accidents
+			 if( nextRoad->numAccidents == 0 && nextRoad->roadContents[nextRoad->length-1] == NULL ){
+				 // Move the car through the intersection?
+				 // how to move car?
+				 nextRoad->roadContents[nextRoad->length-1] = frontCar;
+				 frontCar->moved = true;
+				 frontCar->next = nextRoad->to;
+				 currRoad->roadContents[0] = NULL;
+			 }
+			 
+		 }
+		 }
+
+		 else{
+			 printf("The car is at its destination\n");
+		 }
+
+		}
+
+		 // Check if current car is not at its destination
+		 // use frontCar
+		 // If car is at its destination, take it off road
+	 } // Closes the for
+	 */
+	 
+
+
+	 /*
+	 for( i = 0; i < pTrafficData->numRoads; i++){
+
+		 // Inner loop to set all cars moved to false
+		
+		 Road* currRoad = pTrafficData->arrayOfRoads[i];
+
+		 for( j = 0; j < currRoad->length; j++){
+			 if( currRoad->roadContents[j] != NULL ){
+				 currRoad->roadContents[j]->moved = false;
+			 }
+		 }
+		 
+
+		 // Check if current car is not at its destination, if car is at its destination, take it off the road
+		 for( j = 0; j < currRoad->length-1; j++){
+
+			 if( currRoad->roadContents[j] != NULL ){
+				 Car* tempCarAtDest = currRoad->roadContents[j];
+				 // If we are green light, dest is where our road goes to, and we are at end of road
+				 if( currRoad->currentLightState == GREEN_LIGHT && tempCarAtDest->destination == currRoad->to && j == currRoad->length-1 ){
+					 // Exit the car from simulation
+					 printf("Car successfully traveled from %d to %d in %d time steps.\n",
+					 tempCarAtDest->origin, tempCarAtDest->destination, step-tempCarAtDest->stepAdded);
+
+				 }
+			 }
+
+		 }
+		
+	 }
+	 */
+
+	 // Check if the current car is not at its destination
+	 // else, take the care off the road
+
+	 printf("\n");
+	 totalSteps++;
 	 step++;
-	 pTrafficData->numCars -= 1;//not necessary just testing
     }
+
+
+    // Free cars as they exit the simulation, once they hit their dest they leave
+
+    // When cars hit their destination, see how long it took
 
     /* After the loop finishes print the average and max number of steps it took
      * for a car to reach its destination */
+     //avg = totalSteps / 5; kinda confused on this calculation
+     //max = 0;
+
 }
 
 /* freeTrafficData
@@ -325,6 +472,8 @@ void freeTrafficData(TrafficData* pTrafficData) {
      * priorityQueue.h: freePQ
      * graph.h: freeGraph
      */
+
+     // Free each road on its own
 
      free(pTrafficData->arrayOfRoads);
      freePQ(pTrafficData->eventQueue);
