@@ -77,13 +77,13 @@ TrafficData* createTrafficData(char* filename) {
      */
 
      // Malloc traffic data
-     TrafficData* myTrafficData = ( TrafficData* )malloc( 1 * sizeof(TrafficData) );
+     TrafficData* myTrafficData = ( TrafficData* )malloc( sizeof(TrafficData) );
 
      // Malloc the arrayOfRoads
-     Road **roadArray = ( Road** )malloc( numEdges * sizeof(Road*) );
+    // Road **roadArray = ( Road** )malloc( numEdges * sizeof(Road*) ); got rid of this 
 
      // Store the array of roads in traffic data
-     myTrafficData->arrayOfRoads = roadArray;
+     myTrafficData->arrayOfRoads = ( Road** )malloc( numEdges * sizeof(Road*) );
      myTrafficData->numRoads = 0;
 
      /*
@@ -219,7 +219,7 @@ void trafficSimulator(TrafficData* pTrafficData) {
 
      // Issue with while loop wont be seen until cars are deleted
 
-     while( ((step<1000) && (!isEmptyPQ(pTrafficData->eventQueue))) && (pTrafficData->numCars>0) ){
+     while( ((step<11) && (!isEmptyPQ(pTrafficData->eventQueue))) || (pTrafficData->numCars>0) ){
 
         /* Print the current step number */
 	printf("STEP %d\n", step);
@@ -246,7 +246,7 @@ void trafficSimulator(TrafficData* pTrafficData) {
         /* Loop on events associated with this time step */
 
 
-	while( !isEmptyPQ(pTrafficData->eventQueue) && getFrontPriority(pTrafficData->eventQueue) == step ) // does event queue need to go till empty?
+	while( !isEmptyPQ(pTrafficData->eventQueue) &&  step == getFrontPriority(pTrafficData->eventQueue)  ) // does event queue need to go till empty?
         {
 		// Only dequeue if there is an event on this timeStep
 		// Get front priority 
@@ -357,25 +357,24 @@ void trafficSimulator(TrafficData* pTrafficData) {
          * both roads)
          */
 
-	 /*
 	 
-	 bool res = false;
-	 int nextIntersection = 0;
+	 
+	
 	 for( i = 0; i < pTrafficData->numRoads; i++){
+   	 int nextIntersection = 0;
 		 // Move cars through intersections if:
 		 //there are no accidents on the road, they havent alr moved, green light, and next road has empty space at end of array (len-1)
 		 // otherwise, it remains at the front of its current road
 		 Road* currRoad = pTrafficData->arrayOfRoads[i];
 		 Car* frontCar = currRoad->roadContents[0];
-		 Road* nextRoad = NULL;
 
-		 if( (frontCar != NULL) && (currRoad->currentLightState == GREEN_LIGHT) && (currRoad->numAccidents == 0) ){
-		 if( frontCar->destination != nextIntersection ){
+		 if( (frontCar != NULL) && (frontCar->moved == false) &&(currRoad->currentLightState == GREEN_LIGHT) && (currRoad->numAccidents == 0) ){
+		 if( frontCar->destination != currRoad->to ){
 
-		 res = getNextOnShortestPath(pTrafficData->roadGraph, currRoad->to, frontCar->destination, &nextIntersection);
-		 if( res ){ // should always be true but still might wanna error check
+		  getNextOnShortestPath(pTrafficData->roadGraph, currRoad->to, frontCar->destination, &nextIntersection);
+  // should always be true but still might wanna error check
 			 // Get next road getEdgeData?
-			 nextRoad = getEdgeData(pTrafficData->roadGraph, currRoad->to, nextIntersection);
+			  Road* nextRoad = getEdgeData(pTrafficData->roadGraph, currRoad->to, nextIntersection);
 			 printf("Next intersection is: %d\n", nextIntersection);
 			 // Next road end is empty & no accidents
 			 if( nextRoad->numAccidents == 0 && nextRoad->roadContents[nextRoad->length-1] == NULL ){
@@ -387,11 +386,14 @@ void trafficSimulator(TrafficData* pTrafficData) {
 				 currRoad->roadContents[0] = NULL;
 			 }
 			 
-		 }
+	
 		 }
 
 		 else{
 			 printf("The car is at its destination\n");
+        currRoad->roadContents[0] = NULL;
+        freeCar(frontCar);
+        pTrafficData->numCars--;
 		 }
 
 		}
@@ -400,22 +402,11 @@ void trafficSimulator(TrafficData* pTrafficData) {
 		 // use frontCar
 		 // If car is at its destination, take it off road
 	 } // Closes the for
-	 */
+	 
 	 
 
 
 	 /*
-	 for( i = 0; i < pTrafficData->numRoads; i++){
-
-		 // Inner loop to set all cars moved to false
-		
-		 Road* currRoad = pTrafficData->arrayOfRoads[i];
-
-		 for( j = 0; j < currRoad->length; j++){
-			 if( currRoad->roadContents[j] != NULL ){
-				 currRoad->roadContents[j]->moved = false;
-			 }
-		 }
 		 
 
 		 // Check if current car is not at its destination, if car is at its destination, take it off the road
