@@ -78,7 +78,10 @@ TrafficData* createTrafficData(char* filename) {
 
      // Malloc traffic data
      TrafficData* myTrafficData = ( TrafficData* )malloc( sizeof(TrafficData) );
-
+if (myTrafficData == NULL) {
+    printf("Memory allocation failed for TrafficData\n");
+    exit(-1);
+}
      // Malloc the arrayOfRoads
     // Road **roadArray = ( Road** )malloc( numEdges * sizeof(Road*) ); got rid of this 
 
@@ -111,7 +114,7 @@ TrafficData* createTrafficData(char* filename) {
 	     Road* currRoad = createRoad( from, to, length, greenOn, greenOff, reset );
 	     // Put in roadArray
 	     myTrafficData->arrayOfRoads[i] = currRoad;
-       setEdge( myTrafficData->roadGraph, from, to, length );
+       setEdge( myTrafficData->roadGraph, currRoad->from, currRoad->to, length );
        setEdgeData( myTrafficData->roadGraph, from, to, currRoad );
 	     myTrafficData->numRoads++;
      }
@@ -151,8 +154,9 @@ TrafficData* createTrafficData(char* filename) {
 	    fscanf( pFile, "%d", &numCarsToAdd );
 
 	    for(j = 0; j < numCarsToAdd; j++){
-
+      
 		    fscanf( pFile, "%d", &dest );
+            
 		    // CAR IS MALLOC'D BE SURE TO FREE IT LATER WITH freeCar
 		    Car* currCar = createCar(timeStep, from, to, dest);
 		    //Put each car into the queue
@@ -214,9 +218,9 @@ void trafficSimulator(TrafficData* pTrafficData) {
      int i = 0;
      int j = 0;
      int step = 0;
-     int totalSteps = step;
      int max = 0;
      double avg = 0.0;
+     int longestMove = 0;
 
      // Issue with while loop wont be seen until cars are deleted
 
@@ -233,7 +237,7 @@ void trafficSimulator(TrafficData* pTrafficData) {
 		// Don't need to worry about resetting, modulo takes care of those cases
     int cycleCount = step % currRoad->lightCycleLength;
 		// If our current step == greenOn
-		if(cycleCount == currRoad->greenStartTime  && cycleCount < currRoad->greenEndTime){
+		if(cycleCount >= currRoad->greenStartTime  && cycleCount < currRoad->greenEndTime){
 			currRoad->currentLightState = GREEN_LIGHT;
 		}
 
@@ -321,7 +325,7 @@ void trafficSimulator(TrafficData* pTrafficData) {
 				 //newCar->stepAdded = step;
 				 // Put the car
 				 currRoad->roadContents[currRoad->length - 1] = newCar;
-				 //newCar->stepAdded = step;
+				 newCar->stepAdded = step;
 				 newCar->moved = true;
 			 }
 
@@ -363,22 +367,16 @@ void trafficSimulator(TrafficData* pTrafficData) {
 	
 	 for( i = 0; i < pTrafficData->numRoads; i++){
    	 int nextIntersection = 0;
-		 // Move cars through intersections if:
-		 //there are no accidents on the road, they havent alr moved, green light, and next road has empty space at end of array (len-1)
-		 // otherwise, it remains at the front of its current road
 		 Road* currRoad = pTrafficData->arrayOfRoads[i];
 		 Car* frontCar = currRoad->roadContents[0];
 
 		 if( (frontCar != NULL) && (frontCar->moved == false) &&(currRoad->currentLightState == GREEN_LIGHT) && (currRoad->numAccidents == 0) ){
 		 if( frontCar->destination != currRoad->to ){
-
 		  getNextOnShortestPath(pTrafficData->roadGraph, currRoad->to, frontCar->destination, &nextIntersection);
-  // should always be true but still might wanna error check
-			 // Get next road getEdgeData?
 			  Road* nextRoad = getEdgeData(pTrafficData->roadGraph, currRoad->to, nextIntersection);
 			 printf("Next intersection is: %d\n", nextIntersection);
 			 // Next road end is empty & no accidents
-			 if( nextRoad->numAccidents == 0 && nextRoad->roadContents[nextRoad->length-1] == NULL ){
+			 if( nextRoad->numAccidents == 0 && nextRoad->roadContents[(nextRoad->length-1)] == NULL ){
 				 // Move the car through the intersection?
 				 // how to move car?
 				 nextRoad->roadContents[nextRoad->length-1] = frontCar;
@@ -391,22 +389,26 @@ void trafficSimulator(TrafficData* pTrafficData) {
 		 }
 
 		 else{
-			 //printf("The car is at its destination\n");
-			 printf("Car successfully traveled from %d to %d in %d time steps.\n", frontCar->origin, frontCar->destination, totalSteps-frontCar->stepAdded);
-			 currRoad->roadContents[0] = NULL;
-			 freeCar(frontCar);
-			 pTrafficData->numCars--;
+			 printf("Car successfully traveled from %d to %d in %d time steps\n", frontCar->origin, frontCar->destination, step-frontCar->stepAdded);
+        currRoad->roadContents[0] = NULL;
+        freeCar(frontCar);
+        pTrafficData->numCars--;
 		 }
 
 		}
 
 	 } // Closes the for
 	 
+	 
+	 // Check if the current car is not at its destination
+	 // else, take the care off the road
+
 	 printf("\n");
-	 totalSteps++;
 	 step++;
     }
 
+
+    // Free cars as they exit the simulation, once they hit their dest they leave
 
     // When cars hit their destination, see how long it took
 
@@ -433,14 +435,12 @@ void freeTrafficData(TrafficData* pTrafficData) {
      * graph.h: freeGraph
      */
 
+     // Free each road on its own
      int i = 0;
-
      freePQ(pTrafficData->eventQueue);
-
      for (i = 0; i < pTrafficData->numRoads; i++){
 	     freeRoad(pTrafficData->arrayOfRoads[i]);
      }
-
      free(pTrafficData->arrayOfRoads);
      freeGraph(pTrafficData->roadGraph);
      free(pTrafficData);
