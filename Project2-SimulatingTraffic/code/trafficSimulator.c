@@ -220,7 +220,6 @@ void trafficSimulator(TrafficData* pTrafficData) {
      int step = 0;
      int max = 0;
      double avg = 0.0;
-     int longestMove = 0;
 
      // Issue with while loop wont be seen until cars are deleted
 
@@ -389,7 +388,16 @@ void trafficSimulator(TrafficData* pTrafficData) {
 		 }
 
 		 else{
-			 printf("Car successfully traveled from %d to %d in %d time steps\n", frontCar->origin, frontCar->destination, step-frontCar->stepAdded);
+			 // Get the average
+			 int timeTaken = step-frontCar->stepAdded;
+			 printf("Car successfully traveled from %d to %d in %d time steps\n", frontCar->origin, frontCar->destination, timeTaken);
+			 avg = avg + timeTaken;
+
+			 // Get the max
+			 max = maxInt(max, timeTaken);
+
+
+			 // Kill the car
         currRoad->roadContents[0] = NULL;
         freeCar(frontCar);
         pTrafficData->numCars--;
@@ -414,8 +422,9 @@ void trafficSimulator(TrafficData* pTrafficData) {
 
     /* After the loop finishes print the average and max number of steps it took
      * for a car to reach its destination */
-     //avg = totalSteps / 5; kinda confused on this calculation
-     //max = 0;
+     avg = avg / pTrafficData->numCars;
+     printf("Average number of time steps to the reach their destination is %0.2lf\n", avg);
+     printf("Maximum number of time steps to the reach their destination is %d.\n", max);
 
 }
 
